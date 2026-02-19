@@ -1,0 +1,106 @@
+<main>
+  <div class="lunar-card">
+    <!-- Star Elements for Bottom Corners -->
+    <div class="star-corner-bottom-left"
+      style="position: absolute; bottom: 10px; left: 10px; color: var(--accent-gold); font-size: 2rem; filter: drop-shadow(0 0 5px var(--accent-gold));">
+      ✦</div>
+    <div class="star-corner-bottom-right"
+      style="position: absolute; bottom: 10px; right: 10px; color: var(--accent-gold); font-size: 2rem; filter: drop-shadow(0 0 5px var(--accent-gold));">
+      ✦</div>
+
+    <div class="header-title">DATA HELENICA ATUAL</div>
+
+    <div class="date-full">
+      {{ todayAthenianDate() }}
+    </div>
+
+    <div class="phase-info-container">
+
+      <div class="phase-text">
+        <div class="phase-name">{{ currentPhase() }}</div>
+        <div class="illumination">Iluminação: {{ illumination() }}</div>
+      </div>
+
+      <div class="future-events">
+        <div class="event-item">Deipnon em {{ daysToDeipnon() }} dias</div>
+        <div class="event-item">
+          Noumenia de {{ nextMonth().lat }} ({{ nextMonth().gr}}) em {{ daysToNoumenia() }} dias
+        </div>
+      </div>
+    </div>
+
+    <app-calendar [currentDay]="realCurrentDayNum()" [monthStartDate]="monthStartDate()" [today]="today"
+      [monthName]="currentHellenicMonth()" (daySelect)="selectDay($event)" (monthChange)="onMonthChange($event)">
+    </app-calendar>
+
+    <div class="year-display">
+      <div class="year-gregorian">{{ currentYearGregorian() }}</div>
+      <div class="year-attic">{{ currentYearAttic() }}</div>
+    </div>
+    <div class="selected-date-display">
+      Data Selecionada: {{ athenianDate() }}
+      <div style="font-size: 0.8em; opacity: 0.8; margin-top: 5px;">{{ gregorianDate() }}</div>
+
+      @if (selectedDedication()) {
+      <div class="dedication-box"
+        style="margin-top: 15px; padding: 10px; border-top: 1px solid rgba(255, 215, 0, 0.3);">
+        <div style="color: var(--accent-gold); font-weight: bold; margin-bottom: 5px;">
+          {{ selectedDedication()?.deity }}
+        </div>
+        @if (selectedDedication()?.description) {
+        <div style="font-size: 0.9em; opacity: 0.8; white-space: pre-line;"
+          [innerHTML]="selectedDedication()?.description | safeHtml" (click)="handleDescriptionClick($event)">
+        </div>
+        }
+
+        @if (selectedDedication()?.suggestions) {
+        <div style="margin-top: 8px;">
+          <h5
+            style="margin: 0 0 2px 0; font-size: 0.85em; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.5px;">
+            Oferendas e Atividades</h5>
+          <div style="font-size: 0.9em; opacity: 0.8; white-space: pre-line;">
+            {{ selectedDedication()?.suggestions }}
+          </div>
+        </div>
+        }
+
+        @if (showKykeonRecipe()) {
+        <div class="recipe-box">
+          <div class="recipe-title">Kykeon</div>
+          <div style="margin-bottom: 15px;">
+            <span class="warning-text">Nota de Segurança Importante:</span>
+            Um dos ingredientes do kykeon, poejo (pennyroyal), não deve ser ingerido por mulheres grávidas, pois pode
+            causar
+            aborto!
+          </div>
+
+          <div style="margin-bottom: 10px; font-weight: bold;">Ingredientes:</div>
+          <ul style="margin: 0 0 15px 20px; opacity: 0.9;">
+            <li>4 xícaras de água</li>
+            <li>2 colheres de sopa cheias de poejo seco</li>
+            <li>2 colheres de sopa de mel</li>
+            <li>2/3 xícara de farinha de cevada</li>
+            <li>1/4 xícara de sêmola (ou farinha de trigo fina)</li>
+          </ul>
+
+          <div style="margin-bottom: 10px; font-weight: bold;">Instruções:</div>
+          <div style="opacity: 0.9;">
+            Ferva a água. Adicione o poejo e cozinhe em fogo brando por 10 min.
+            Adicione o mel e cozinhe por mais 5 min. Coe a erva e descarte.
+            Retorne o líquido ao fogo e misture a farinha de cevada aos poucos para evitar grumos.
+            Misture a sêmola da mesma maneira. O resultado será um mingau fino e liso.
+            Se a mistura ficar muito grossa para beber, misture um pouco de água quente.
+          </div>
+
+          <div class="recipe-source">
+            Fonte: Campbell, Drew. Old Stones, New Temples: Ancient Greek Paganism Reborn. Xlibris, pp. 304-305.
+          </div>
+        </div>
+        }
+      </div>
+      }
+    </div>
+
+  </div>
+</main>
+<router-outlet />

@@ -1,0 +1,36 @@
+<div class="calendar-container">
+    <div class="calendar-nav">
+        <button (click)="prevMonth()" class="nav-btn">&lt;</button>
+        <span>{{ currentMonthName() }}</span>
+        <button (click)="nextMonth()" class="nav-btn">&gt;</button>
+    </div>
+
+    <!-- Decoration removed from here -->
+
+    <div class="days-grid">
+        @for (item of calendarDays(); track $index) {
+        @if (item.type === 'EMPTY') {
+        <div class="day-cell empty"></div>
+        } @else {
+        <div class="day-cell" [class.today]="item.isToday" [class.weekend]="item.isWeekend"
+            (click)="onDayClick(item.day!)">
+
+            <span class="day-number">{{ item.day }}</span>
+
+            @if (item.day === 1) {
+            <span class="event-label">Noumenia</span>
+            }
+            @if (item.isDeipnon) {
+            <span class="event-label">Deipnon</span>
+            }
+
+            @if (item.holiday) {
+            @if (item.holiday.name) {
+            <span class="event-label">{{ item.holiday.name }}</span>
+            }
+            }
+        </div>
+        }
+        }
+    </div>
+</div>

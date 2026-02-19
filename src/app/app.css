@@ -1,0 +1,311 @@
+:host {
+    /* Cores Art Nouveau / Fantasy */
+    --bg-dark: #2a1b3d;
+    /* Deep Violet */
+    --bg-deep: #1a0f2e;
+    /* Darker Plum */
+    --text-primary: #f3e5ab;
+    /* Cream */
+    --text-secondary: #e99d8a;
+    /* Dusty Pink */
+    --accent-gold: #c5a059;
+    /* Gold */
+    --accent-dark-gold: #9d7e58;
+    --card-bg: rgba(42, 27, 61, 0.7);
+
+    display: block;
+    display: block;
+    min-height: 100vh;
+    /* Bottom Gradient Restored as requested */
+    background: radial-gradient(circle at bottom, rgba(50, 30, 70, 0.8) 0%, var(--bg-dark) 50%);
+    color: var(--text-primary);
+    font-family: 'Playfair Display', serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.lunar-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(8px);
+    border: 2px solid var(--accent-gold);
+    border-radius: 1rem;
+    padding: 3rem;
+    text-align: center;
+    box-shadow:
+        0 0 20px rgba(0, 0, 0, 0.5),
+        inset 0 0 30px rgba(197, 160, 89, 0.1);
+    max-width: 600px;
+    width: 100%;
+    animation: fadeIn 1s ease-out;
+    position: relative;
+    overflow: hidden;
+    /* To verify if stars are inside or overlap border. Better: visible for stars on corners */
+    overflow: visible;
+}
+
+/* Star of Bethlehem in 4 corners */
+.lunar-card::before,
+.lunar-card::after,
+.star-corner-bottom-left,
+.star-corner-bottom-right {
+    content: '✦';
+    /* Unicode star as a placeholder for Star of Bethlehem */
+    position: absolute;
+    color: var(--accent-gold);
+    font-size: 2rem;
+    line-height: 1;
+    filter: drop-shadow(0 0 5px var(--accent-gold));
+}
+
+.lunar-card::before {
+    top: 10px;
+    left: 10px;
+}
+
+.lunar-card::after {
+    top: 10px;
+    right: 10px;
+}
+
+/* We need extra elements for bottom corners or use psuedo on a wrapper. 
+   Since we can't add markup easily to existing comp without full replace, 
+   let's use box-shadow tricks or just add elements in markup if possible.
+   Or... use a background-image with 4 stars.
+   Let's try multiple backgrounds for stars? 
+   No, user asked for "add stars".
+   Let's add the classes to the html for bottom ones.
+*/
+
+
+/* Decorative corner elements could go here with pseudo-elements, 
+   but keeping it simple for now */
+
+.moon-wrapper {
+    display: block;
+    animation: float 6s ease-in-out infinite;
+}
+
+.moon-emoji {
+    font-size: 6rem;
+    display: block;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 20px #c5a059);
+}
+
+.moon-emoji.southern {
+    transform: scaleX(-1);
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+    background: linear-gradient(to bottom, #f3e5ab, #c5a059);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--accent-gold);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.date-full {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.selected-date-display {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--accent-gold);
+    border-top: 1px solid var(--accent-gold);
+    padding-top: 1rem;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.phase-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    justify-content: center;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    position: relative;
+    /* Context for moon bg */
+    overflow: hidden;
+    /* clean edges */
+    z-index: 1;
+}
+
+
+
+.phase-text {
+    font-size: 4rem;
+    /* Large emoji size */
+    line-height: 1;
+    z-index: 2;
+    position: relative;
+    text-shadow: 0 0 20px rgba(197, 160, 89, 0.4);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+.phase-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-family: 'Cinzel', serif;
+    text-shadow: 0 0 10px rgba(243, 229, 171, 0.4);
+}
+
+.illumination {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 0.2rem;
+    font-style: italic;
+}
+
+.future-events {
+    margin-top: 1.5rem;
+    text-align: center;
+    border-top: 1px solid var(--accent-gold);
+    padding-top: 1rem;
+    width: 100%;
+}
+
+.event-item {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.year-display {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: var(--accent-gold);
+    margin-top: 1rem;
+    text-shadow: 0 0 10px rgba(197, 160, 89, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.year-gregorian {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.year-attic {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+::ng-deep .dedication-title {
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+::ng-deep .interactive-link {
+    color: var(--accent-gold);
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+::ng-deep .interactive-link:hover {
+    color: #ffd700;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.recipe-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(10, 10, 10, 0.6);
+    border: 1px solid var(--accent-gold);
+    border-radius: 8px;
+    text-align: left;
+    font-size: 0.9em;
+    line-height: 1.5;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.recipe-title {
+    color: var(--accent-gold);
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+    padding-bottom: 5px;
+}
+
+.warning-text {
+    color: #ff6b6b;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.recipe-source {
+    margin-top: 15px;
+    font-style: italic;
+    opacity: 0.7;
+    font-size: 0.8em;
+}

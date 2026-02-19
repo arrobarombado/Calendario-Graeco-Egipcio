@@ -1,0 +1,260 @@
+{
+  "701.1": [
+    {
+      "name": "Hekatombaion",
+      "length": 29,
+      "start": "2025-06-26"
+    },
+    {
+      "name": "Metageitnion",
+      "length": 30,
+      "start": "2025-07-25"
+    },
+    {
+      "name": "Boedromion",
+      "length": 29,
+      "start": "2025-08-24"
+    },
+    {
+      "name": "Puanepsion",
+      "length": 30,
+      "start": "2025-09-22"
+    },
+    {
+      "name": "Maimakterion",
+      "length": 30,
+      "start": "2025-10-22"
+    },
+    {
+      "name": "Poseideon",
+      "length": 29,
+      "start": "2025-11-21"
+    },
+    {
+      "name": "Poseideon-2",
+      "length": 30,
+      "start": "2025-12-20"
+    },
+    {
+      "name": "Gamelion",
+      "length": 30,
+      "start": "2026-01-19"
+    },
+    {
+      "name": "Anthesterion",
+      "length": 29,
+      "start": "2026-02-18"
+    },
+    {
+      "name": "Elaphebolion",
+      "length": 30,
+      "start": "2026-03-19"
+    },
+    {
+      "name": "Mounukhion",
+      "length": 29,
+      "start": "2026-04-18"
+    },
+    {
+      "name": "Thargelion",
+      "length": 29,
+      "start": "2026-05-17"
+    },
+    {
+      "name": "Skirophorion",
+      "length": 30,
+      "start": "2026-06-15"
+    }
+  ],
+  "701.2": [
+    {
+      "name": "Hekatombaion",
+      "length": 29,
+      "start": "2026-07-15"
+    },
+    {
+      "name": "Metageitnion",
+      "length": 29,
+      "start": "2026-08-13"
+    },
+    {
+      "name": "Boedromion",
+      "length": 30,
+      "start": "2026-09-11"
+    },
+    {
+      "name": "Puanepsion",
+      "length": 30,
+      "start": "2026-10-11"
+    },
+    {
+      "name": "Maimakterion",
+      "length": 29,
+      "start": "2026-11-10"
+    },
+    {
+      "name": "Poseideon",
+      "length": 30,
+      "start": "2026-12-09"
+    },
+    {
+      "name": "Gamelion",
+      "length": 30,
+      "start": "2027-01-08"
+    },
+    {
+      "name": "Anthesterion",
+      "length": 30,
+      "start": "2027-02-07"
+    },
+    {
+      "name": "Elaphebolion",
+      "length": 29,
+      "start": "2027-03-09"
+    },
+    {
+      "name": "Mounukhion",
+      "length": 30,
+      "start": "2027-04-07"
+    },
+    {
+      "name": "Thargelion",
+      "length": 29,
+      "start": "2027-05-07"
+    },
+    {
+      "name": "Skirophorion",
+      "length": 29,
+      "start": "2027-06-05"
+    }
+  ],
+  "701.3": [
+    {
+      "name": "Hekatombaion",
+      "length": 30,
+      "start": "2027-07-04"
+    },
+    {
+      "name": "Metageitnion",
+      "length": 29,
+      "start": "2027-08-03"
+    },
+    {
+      "name": "Boedromion",
+      "length": 29,
+      "start": "2027-09-01"
+    },
+    {
+      "name": "Puanepsion",
+      "length": 30,
+      "start": "2027-09-30"
+    },
+    {
+      "name": "Maimakterion",
+      "length": 29,
+      "start": "2027-10-30"
+    },
+    {
+      "name": "Poseideon",
+      "length": 30,
+      "start": "2027-11-28"
+    },
+    {
+      "name": "Gamelion",
+      "length": 30,
+      "start": "2027-12-28"
+    },
+    {
+      "name": "Anthesterion",
+      "length": 30,
+      "start": "2028-01-27"
+    },
+    {
+      "name": "Elaphebolion",
+      "length": 30,
+      "start": "2028-02-26"
+    },
+    {
+      "name": "Mounukhion",
+      "length": 29,
+      "start": "2028-03-27"
+    },
+    {
+      "name": "Thargelion",
+      "length": 30,
+      "start": "2028-04-25"
+    },
+    {
+      "name": "Skirophorion",
+      "length": 29,
+      "start": "2028-05-25"
+    }
+  ],
+  "701.4": [
+    {
+      "name": "Hekatombaion",
+      "length": 29,
+      "start": "2028-06-23"
+    },
+    {
+      "name": "Metageitnion",
+      "length": 30,
+      "start": "2028-07-22"
+    },
+    {
+      "name": "Boedromion",
+      "length": 29,
+      "start": "2028-08-21"
+    },
+    {
+      "name": "Puanepsion",
+      "length": 29,
+      "start": "2028-09-19"
+    },
+    {
+      "name": "Maimakterion",
+      "length": 30,
+      "start": "2028-10-18"
+    },
+    {
+      "name": "Poseideon",
+      "length": 29,
+      "start": "2028-11-17"
+    },
+    {
+      "name": "Poseideon-2",
+      "length": 30,
+      "start": "2028-12-16"
+    },
+    {
+      "name": "Gamelion",
+      "length": 30,
+      "start": "2029-01-15"
+    },
+    {
+      "name": "Anthesterion",
+      "length": 30,
+      "start": "2029-02-14"
+    },
+    {
+      "name": "Elaphebolion",
+      "length": 29,
+      "start": "2029-03-16"
+    },
+    {
+      "name": "Mounukhion",
+      "length": 30,
+      "start": "2029-04-14"
+    },
+    {
+      "name": "Thargelion",
+      "length": 29,
+      "start": "2029-05-14"
+    },
+    {
+      "name": "Skirophorion",
+      "length": 30,
+      "start": "2029-06-12"
+    }
+  ]
+}
