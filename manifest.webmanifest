@@ -1,6 +1,8 @@
 {
-  "name": "calendario",
-  "short_name": "calendario",
+  "name": "Calendario",
+  "short_name": "Calendario",
+  "theme_color": "#D4AF37",
+  "background_color": "#000000",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
