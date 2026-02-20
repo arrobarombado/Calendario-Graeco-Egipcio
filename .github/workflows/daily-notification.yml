@@ -1,0 +1,28 @@
+name: Daily Hellenic Notification
+
+on:
+  schedule:
+    # Run at 21:00 UTC every day (Approx 18:00 BRT, sunset in Brazil, ideal for Hellenic day change)
+    - cron: '0 21 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Send Notification
+        env:
+          ONESIGNAL_APP_ID: ${{ secrets.ONESIGNAL_APP_ID }}
+          ONESIGNAL_API_KEY: ${{ secrets.ONESIGNAL_API_KEY }}
+        run: node scripts/send-daily-notification.mjs

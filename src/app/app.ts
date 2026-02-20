@@ -5,6 +5,12 @@ import { MoonPhaseService, Dedication } from './services/moon-phase.service';
 import { CalendarComponent } from './components/calendar/calendar';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 
+declare global {
+  interface Window {
+    OneSignalDeferred: any[];
+  }
+}
+
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, CalendarComponent, SafeHtmlPipe], // Adicionar CalendarComponent e SafeHtmlPipe aos imports
@@ -37,6 +43,17 @@ export class App {
   protected readonly currentHellenicMonth = signal('');
 
   ngOnInit() {
+    // Initialize OneSignal
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    window.OneSignalDeferred.push(async function (OneSignal: any) {
+      await OneSignal.init({
+        appId: "86860bdb-36bc-484f-823d-b086914d212a",
+        notifyButton: {
+          enable: true,
+        },
+      });
+    });
+
     this.moonService.requestUserLocation(); // Request location immediately
     // Initial State: Today
     const today = new Date();
