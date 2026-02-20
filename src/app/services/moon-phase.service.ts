@@ -434,7 +434,11 @@ export class MoonPhaseService {
                     suggestions: 'Ofereça uma libação de vinho diluído em água ou suco de uva ao seu Agathos Daimon e peça prosperidade para o lar. Recite o Hino Órfico 73 ou faça suas próprias preces por um bom ânimo e favor divino neste mês. É o momento ideal para cultivar a boa sorte e a harmonia familiar.'
                 };
             case 3:
-                return { deity: 'O 3º dia é dedicado a Atena', description: '' };
+                return {
+                    deity: 'O 3º dia é dedicado a Atena',
+                    description: 'Atena é celebrada no 3º dia do mês lunar. Faça uma prece pedindo que Atena lhe ajude a planejar bem suas ações e falas neste dia.',
+                    suggestions: 'Oferendas e Atividades:\nVista alguma peça de roupa azul-clara ou cinza, ofereça seus estudos e leituras de hoje a ela, e pratique atos corretos e nobres.\n\nSugestão de Epítetos:\nParthenos (Virgem), Polias (Protetora da Cidade), Boulaia (do Conselho), Ergane (Trabalhadora), Nike (Vitória).\n\nSugestão de Ofertas:\nAzeite de oliva, ramos de oliveira, pão, uma coruja de cerâmica ou desenho, um hino ou poema recitado, incenso de olíbano ou sálvia.'
+                };
             case 4:
                 return {
                     deity: 'Afrodite, Hermes e Héracles',
