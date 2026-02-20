@@ -58,8 +58,8 @@
           <h5
             style="margin: 0 0 2px 0; font-size: 0.85em; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.5px;">
             Oferendas e Atividades</h5>
-          <div style="font-size: 0.9em; opacity: 0.8; white-space: pre-line;">
-            {{ selectedDedication()?.suggestions }}
+          <div style="font-size: 0.9em; opacity: 0.8; white-space: pre-line;"
+            [innerHTML]="selectedDedication()?.suggestions | safeHtml" (click)="handleDescriptionClick($event)">
           </div>
         </div>
         }
