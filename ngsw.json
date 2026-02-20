@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1771626085904,
+  "timestamp": 1771626947917,
   "index": "/Calendario-Graeco-Egipcio/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/Calendario-Graeco-Egipcio/favicon.ico",
         "/Calendario-Graeco-Egipcio/index.html",
-        "/Calendario-Graeco-Egipcio/main-HUDPLGRG.js",
+        "/Calendario-Graeco-Egipcio/main-KIH5EMEB.js",
         "/Calendario-Graeco-Egipcio/manifest.webmanifest",
         "/Calendario-Graeco-Egipcio/styles-5INURTSO.css"
       ],
@@ -48,16 +48,16 @@
     "/Calendario-Graeco-Egipcio/assets/moon-full.png": "7004a2082a8d64b7f9c78e8e361a45d0810a775f",
     "/Calendario-Graeco-Egipcio/favicon.ico": "5c55ac9aac18c03fdcf0fb25323a686fbc959add",
     "/Calendario-Graeco-Egipcio/flower.png": "12cbc3a84e2d7b8b767a6df3cffe45d918da682d",
-    "/Calendario-Graeco-Egipcio/icons/icon-128x128.png": "91a41835ba39b7f93275446541a79446fb33d091",
-    "/Calendario-Graeco-Egipcio/icons/icon-144x144.png": "337cc6422d1617e7fbb036348147ce873be0f8d8",
-    "/Calendario-Graeco-Egipcio/icons/icon-152x152.png": "64248bcafce8d145febe21839a39014e5d9e0cdd",
-    "/Calendario-Graeco-Egipcio/icons/icon-192x192.png": "588d98f560f539ae900f7b874e6d152f8fb5c063",
-    "/Calendario-Graeco-Egipcio/icons/icon-384x384.png": "4bea2f40012e4a4a9895679c9f1773400dd43bd1",
-    "/Calendario-Graeco-Egipcio/icons/icon-512x512.png": "69f77dadd0a427f8e547eee525744c22a158bad0",
-    "/Calendario-Graeco-Egipcio/icons/icon-72x72.png": "7b198f9afef1f1ef2ce73a6561c0fbd71b6bd95b",
-    "/Calendario-Graeco-Egipcio/icons/icon-96x96.png": "1e14fa8b95a724502adb700f0ca6214572bc0d09",
-    "/Calendario-Graeco-Egipcio/index.html": "d3f739bdf809aed4d5042c5071a7c5b5c8db6591",
-    "/Calendario-Graeco-Egipcio/main-HUDPLGRG.js": "173312e287a94a44bc7e40c79dfb6df582384925",
+    "/Calendario-Graeco-Egipcio/icons/icon-128x128.png": "bb31ec375978368b0a24ec9e5f685c836240d6df",
+    "/Calendario-Graeco-Egipcio/icons/icon-144x144.png": "c4c8ed2b334cfc0224a241a8cd2728bc7bd80da3",
+    "/Calendario-Graeco-Egipcio/icons/icon-152x152.png": "d70f1f2a69cb47ad94680d87441f0a7538f8f67d",
+    "/Calendario-Graeco-Egipcio/icons/icon-192x192.png": "f02ac1bb43d56c7dd4eaf57b1187681a7445170b",
+    "/Calendario-Graeco-Egipcio/icons/icon-384x384.png": "4e152ba23bd7bfc438921f9515701b35512814bb",
+    "/Calendario-Graeco-Egipcio/icons/icon-512x512.png": "28816a80839a94fedbccae255249356de76a517f",
+    "/Calendario-Graeco-Egipcio/icons/icon-72x72.png": "3f777fd3bd2eb07e08d91b8eaa7309905f88e52f",
+    "/Calendario-Graeco-Egipcio/icons/icon-96x96.png": "d90f5b707b533e39948811875512271e5f10336e",
+    "/Calendario-Graeco-Egipcio/index.html": "99031d823abbf49c2b7ef0bf312c0449a5fe2d79",
+    "/Calendario-Graeco-Egipcio/main-KIH5EMEB.js": "5af280cf44309a6129f149faa572706a9869e308",
     "/Calendario-Graeco-Egipcio/manifest.webmanifest": "0bcc7e315b03b47c7b439ade7cb86ac3ef158155",
     "/Calendario-Graeco-Egipcio/styles-5INURTSO.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
