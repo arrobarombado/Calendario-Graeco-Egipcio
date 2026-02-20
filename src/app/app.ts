@@ -197,12 +197,15 @@ export class App {
   });
 
   protected readonly showKykeonRecipe = signal(false);
+  protected readonly showKathiskosRecipe = signal(false);
 
   handleDescriptionClick(event: MouseEvent) {
     const target = event.target as HTMLElement;
     // Check if clicked element has the specific data attribute
     if (target.getAttribute('data-action') === 'toggle-kykeon') {
       this.showKykeonRecipe.update(v => !v);
+    } else if (target.getAttribute('data-action') === 'toggle-kathiskos') {
+      this.showKathiskosRecipe.update(v => !v);
     }
   }
 
@@ -232,6 +235,7 @@ export class App {
 
     // Reset recipe state on day change
     this.showKykeonRecipe.set(false);
+    this.showKathiskosRecipe.set(false);
 
     // View date usually stays same if we just clicked a day.
     this.updateView();
