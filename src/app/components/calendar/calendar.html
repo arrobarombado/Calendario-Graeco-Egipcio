@@ -29,6 +29,10 @@
             <span class="event-label">{{ item.holiday.name }}</span>
             }
             }
+
+            @if (item.holiday || item.day === 1 || item.isDeipnon) {
+            <img src="flower.png" class="festival-flower" alt="Flower" onerror="this.style.display='none'">
+            }
         </div>
         }
         }
